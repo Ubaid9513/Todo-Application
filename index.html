@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Application</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div>
+
+    <!-- <div>
         <input type="text" id="todo-val" placeholder="Enter Todo">
         <button id="todobtn" onclick="todoItem()">Add to List</button>
         <button onclick="delAll()">Delete All</button>
@@ -17,9 +19,26 @@
         <ul id="list">
 
         </ul>
+    </div> -->
+    <!-- ---X--- -->
+
+
+    <div id="main">
+        <h1>Todo Application</h1>
+        <div>
+            <input type="text" id="todoInput" placeholder="Enter Todo">
+            <button id="todoBtn" onclick="todoBtn()">Add To List</button>
+            <button id="delAll" onclick="deleteAll()">Delete</button>
+        </div>
     </div>
+    <div>
+        <ul id="list"></ul>
+    </div>
+
+
 
 
     <script src="app.js"></script>
 </body>
+
 </html>
