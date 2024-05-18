@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo Application</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- <div>
-        <input type="text" id="todo-val" placeholder="Enter Todo">
-        <button id="todobtn" onclick="todoItem()">Add to List</button>
-        <button onclick="delAll()">Delete All</button>
-    </div>
-    <div>
-        <ul id="list">
-
-        </ul>
-    </div> -->
-    <!-- ---X--- -->
-
-
-    <div id="main">
+    <div class="container">
         <h1>Todo Application</h1>
-        <div>
-            <input type="text" id="todoInput" placeholder="Enter Todo">
-            <button id="todoBtn" onclick="todoBtn()">Add To List</button>
-            <button id="delAll" onclick="deleteAll()">Delete</button>
+        <div class="todo_header">
+            <input id="task_inp" type="text" placeholder="Enter your Task">
+            <button class="btn" onclick="addTask(this)">Add Task</button>
+            <button class="btn" onclick="delAll(this)">Delete All</button>
+        </div>
+        <div id="task_list">
+            <ul>
+
+            </ul>
         </div>
     </div>
-    <div>
-        <ul id="list"></ul>
-    </div>
-
-
-
+    
 
     <script src="app.js"></script>
 </body>
-
 </html>

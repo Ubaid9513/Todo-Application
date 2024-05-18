@@ -1,87 +1,34 @@
+var task_inp = document.getElementById("task_inp");
+var task_list = document.getElementById("task_list");
+function addTask(){
+    if(task_inp.value === ""){
+        alert("Enter Task");
+    }
+    else{
+        // create li 
+        var task_li = document.createElement("li");
+        task_li.innerHTML = task_inp.value;
+        task_list.appendChild(task_li);
+        task_inp.value = "";
 
-// function todoItem(){
-//     var todoVal = document.getElementById("todo-val");
-//     // create li tag with textNode
-//     var li = document.createElement("li");
-//     var todoText = document.createTextNode(todoVal.value);
-//     var list = document.getElementById("list");
-//     li.appendChild(todoText);
-    
-//     // create delete button
-    
-//     var delBtn = document.createElement("button");
-//     var deltext = document.createTextNode("Delete");
-//     delBtn.setAttribute("onclick","delItem(this)");
-//     delBtn.appendChild(deltext);
-    
-//     // create edit button
-    
-//     var editBtn = document.createElement("button");
-//     var editText = document.createTextNode("Edit");
-//     editBtn.appendChild(editText);
-//     editBtn.setAttribute("onclick","editItem(this)")
-    
-//     li.appendChild(editBtn);
-//     li.appendChild(delBtn);
-//     list.appendChild(li);
-//     // console.log(li);
-//     todoVal.value = ""; 
-// }
+        // delete button
+        var del_task = document.createElement("button");
+        var delVal = document.createTextNode("Delete");
+        del_task.appendChild(delVal);
+        del_task.setAttribute("onclick","delTask(this)")
+        task_li.appendChild(del_task);
 
-// function delItem(e){
-//     e.parentNode.remove();
-// }
-// function delAll(){
-//     list.innerHTML = "";
-// }
-// function editItem(e){
-//     var editVal = prompt("Enter Edit Value");
-//     e.parentNode.firstChild.nodeValue = editVal; 
-// }
-
-
-
-
-
-
-
-
-
-function todoBtn(){
-    var todoInput = document.getElementById("todoInput");
-    // create li with appendChild
-    var todoLi = document.createElement("li");
-    var todoText = document.createTextNode(todoInput.value);
-    todoLi.appendChild(todoText);
-    // console.log(todoLi);
-    var list = document.getElementById("list");
-    list.appendChild(todoLi);
-    todoInput.value = "";
-
-// create delete btn
-    var delBtn = document.createElement("button");
-    var del = document.createTextNode("Delete");
-    delBtn.appendChild(del);
-    todoLi.appendChild(delBtn);
-    delBtn.setAttribute("onclick","delBtn(this)");
-    // console.log(delBtn);
-
-// create edit button
-var editBtn = document.createElement("button");
-var editVal = document.createTextNode("Edit");
-editBtn.appendChild(editVal);
-todoLi.appendChild(editBtn);
-editBtn.setAttribute("onclick","editBtn(this)")
-
+        // edit button
+        var edit_task = document.createElement("button");
+        var editVal = document.createTextNode("Edit");
+        edit_task.appendChild(editVal);
+        task_li.appendChild(edit_task);
+        edit_task.setAttribute("onclick","editTask()")
+    }
 }
-function delBtn(e){
-    e.parentNode.remove()
+function delTask(e){
+    e.parentNode.remove();
 }
-function deleteAll(){
-list.innerHTML = "";
-}
-function editBtn(a){
-    var editVal = prompt("Enter Edit Value");
-    a.parentNode.firstChild.nodeValue = (editVal);
-    console.log(a); 
+function editTask(){
+    
 }
